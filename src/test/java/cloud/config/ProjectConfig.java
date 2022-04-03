@@ -19,6 +19,6 @@ public interface ProjectConfig extends Config {
     String size();
     @DefaultValue("91.0")
     String browserVersion();
-//    @DefaultValue("selenoid.autotests.cloud")
+    @DefaultValue("selenoid.autotests.cloud")
     String remoteUrl();
 }
