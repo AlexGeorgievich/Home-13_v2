@@ -3,9 +3,9 @@ package cloud.config;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
-        "file:/tmp/auth.properties",
-        "classpath:/config/auth.properties"
+        "classpath:config/auth.properties"
 })
+
 public interface AuthConfig extends Config {
 
     @Key("username")

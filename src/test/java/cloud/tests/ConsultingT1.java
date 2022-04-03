@@ -44,7 +44,7 @@ public class ConsultingT1 extends TestBase {
         });
     }
 
-    @Tag("smoke")
+//    @Tag("smoke")
     @Test
     @Description("Проверка доступности сайта и переход в раздел -О компании- и Девиз компании")
     @DisplayName("Проверка раздела о компании  ")
@@ -146,7 +146,7 @@ public class ConsultingT1 extends TestBase {
     @Owner("Курс  QA.GURU")
     @Link(value = "Тестирование UI сайта", url = "https://www.t1-consulting.ru/")
     @Test
-    @Tag("smoke")
+//    @Tag("smoke")
     @DisplayName("Проверка поиска по сайту")
     void successfulSearchTest() {
         step("Открытие сайта по адресу - " + baseUrl, () -> {
@@ -163,7 +163,7 @@ public class ConsultingT1 extends TestBase {
 
     void openPageOfSite(String urlSite) {
         step("Открытие сайта - 'https://www.t1-consulting.ru/'", () ->
-                open(baseUrl));
+                open(urlSite));
     }
 
 }
