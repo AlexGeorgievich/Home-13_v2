@@ -17,6 +17,8 @@ public interface ProjectConfig extends Config {
     String browser();
     @DefaultValue("1920x1080")
     String size();
-    @DefaultValue("91")
-    String version();
+    @DefaultValue("91.0")
+    String browserVersion();
+//    @DefaultValue("selenoid.autotests.cloud")
+    String remoteUrl();
 }
