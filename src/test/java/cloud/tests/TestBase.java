@@ -24,27 +24,27 @@ public class TestBase {
         ProjectConfig cfg = ConfigFactory.create(ProjectConfig.class,System.getProperties());
         String user = cfg.user(),
                 password = cfg.password(),
-                baseUrl = cfg.getUrl();
-                browserVersion = cfg.browserVersion();
-                remote = cfg.remoteUrl();
-
-        remote = "https://" + user + ":" + password + "@" + System.getProperty("remoteBrowser");
+                baseUrl = cfg.getUrl(),
+                browserVersion = cfg.browserVersion(),
+                remoteUrl = cfg.remoteUrl();
+//                remote = "https://" + user + ":" + password + "@" + System.getProperty("remoteBrowser");
 
         browser = cfg.browser();
         Configuration.browserVersion = browserVersion;
         Configuration.browserSize = cfg.size();
         Configuration.baseUrl = baseUrl;
+        Configuration.remote = "https://" + user + ":" + password + "@" + System.getProperty("remoteBrowser");
 //        Configuration.baseUrl = "https://www.t1-consulting.ru/";
 //        Configuration.browserSize = System.getProperty("size", "1920x1080");
 //        Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.pageLoadTimeout = 80000;
         Configuration.browserVersion = System.getProperty("version", "91");
 
-        System.out.println("user -" + user);
-        System.out.println("password -" + password);
-        System.out.println("baseUrl -" +  baseUrl);
-        System.out.println("user -" + browser);
-        System.out.println("user -" + remote);
+        System.out.println("user - " + user);
+        System.out.println("password - " + password);
+        System.out.println("baseUrl - " +  baseUrl);
+        System.out.println("browser - " + browser);
+        System.out.println("remote - " + remote);
 
 
 //        //password and user for remote browser
@@ -59,7 +59,7 @@ public class TestBase {
 
         Attach.attachAsText("Browser: ", browser);
         Attach.attachAsText("Version: ", browserVersion);
-        Attach.attachAsText("Remote Url: ", remote);
+        Attach.attachAsText("Remote Url: ", remoteUrl);
     }
 
     @AfterEach
