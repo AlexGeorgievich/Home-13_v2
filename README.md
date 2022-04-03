@@ -1,4 +1,18 @@
-## Проект по тестированию  страниц сайта компании "Т1 Консалтинг", – российский разработчик и интегратор, входит в Группу Т1.
+## 11. Управляем параметрами в коде и в Jenkins.
+1. Передаем параметры в код из командной строки
+2. Прячем приватные данные с библиотекой owner
+3. Передаем параметры из jenkins
+
+## Задание
+1. Доработать свой код:
+
+1.1 Передать из дженкинса адрес удаленного браузера
+
+1.2 Спрятать логин/пароль к удаленному браузеру в .properties файл, считывать его нужно в коде с owner
+
+
+
+### Проект по тестированию  страниц сайта компании "Т1 Консалтинг", – российский разработчик и интегратор, входит в Группу Т1.
 > <a target="_blank" href="https://www.t1-consulting.ru/">Ссылка на главную страницу сайта</a>
 
 
@@ -10,9 +24,7 @@
 - [Запуск из терминала](#earth_africa-Запуск-тестов-из-терминала)
 - [Allure отчет](#earth_africa-Allure-отчет)
 - [Отчет в Telegram](#earth_africa-Уведомление-в-Telegram-при-помощи-бота)
-- [Видео примеры прохождения тестов](#earth_africa-Примеры-видео-о-прохождении-тестов)
-
-
+ 
 ### Проект реализован с использованием
 
 ### Список проверок, реализованных в автотестах
@@ -41,15 +53,6 @@ Run tests with filled remote.properties:
 gradle clean test
 ```
 
-Run tests with not filled remote.properties:
-```bash
-gradle clean -DremoteDriverUrl=https://%s:%s@selenoid.autotests.cloud/wd/hub/ -DvideoStorage=https://selenoid.autotests.cloud/video/ -Dthreads=1 test
-```
-
-Serve report:
-```bash
-allure serve build/allure-results
-```
  
 :heart: <a target="_blank" href="https://qa.guru">qa.guru</a><br/>
 :blue_heart: <a target="_blank" href="https://t.me/qa_automation">t.me/qa_automation</a>
