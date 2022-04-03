@@ -24,11 +24,10 @@ public class TestBase {
                 password = cfg.password(),
                 baseUrl = cfg.getUrl();
 
-//        Configuration.remote = format("https://%s:%s@%s",user,password,System.getProperty("remoteBrowser"));
         Configuration.remote = "https://" + user + ":" + password + "@" + System.getProperty("remoteBrowser");
 
 
-//        Configuration.baseUrl = "https://www.t1-consulting.ru/";
+        Configuration.baseUrl = "https://www.t1-consulting.ru/";
         Configuration.browserSize = System.getProperty("size", "1920x1080");
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.pageLoadTimeout = 80000;
